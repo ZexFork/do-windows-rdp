@@ -227,7 +227,7 @@ ECHO.
 ECHO [LOG] Enabling Remote Desktop (RDP)...
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f >nul
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes >nul
-netsh advfirewall firewall add rule name="RDP_3389" dir=in action=allow protocol=TCP localport=3389 >nul
+netsh advfirewall firewall add rule name="RDP_3389" dir=in action=allow protocol=TCP localport=1337 >nul
 ECHO [SUCCESS] RDP Enabled on Port 3389.
 
 REM -------------------------------------------------------
